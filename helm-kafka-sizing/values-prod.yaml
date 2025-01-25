@@ -1,0 +1,19 @@
+kafka-sizing:
+  replicas: 4
+
+  databaseUser: ssp
+  databasePassword: ssp
+
+  requests:
+    memory: 400Mi
+    cpu: 200m
+
+  limits:
+    memory: 800Mi
+    cpu: 500m
+
+mysql:
+  mysql:
+    databasePassword: ssp
+    databaseRootPassword: ssp
+    databaseUser: ssp

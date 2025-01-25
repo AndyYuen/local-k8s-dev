@@ -1,0 +1,5 @@
+kafka-sizing:
+
+  replicas: 2
+
+

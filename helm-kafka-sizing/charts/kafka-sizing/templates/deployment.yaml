@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+        tier: frontend
+    spec: # Pod spec
+      containers:
+      - name: webcontainer
+        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: {{ .Values.port }}
+        envFrom:
+        - configMapRef:
+            name: {{ .Values.cmName }}
+        resources:
+          requests:
+            memory: "{{ .Values.requests.memory }} "
+            cpu: "{{ .Values.requests.cpu }}"
+          limits:
+            memory: "{{ .Values.limits.memory }}"
+            cpu: "{{ .Values.limits.cpu }}"
+      restartPolicy: Always

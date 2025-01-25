@@ -1,0 +1,21 @@
+mysql:
+  databaseName: springSession
+  databasePassword: sa
+  databaseRootPassword: sa
+  databaseUser: sa
+
+pv: 
+  name: mysql
+  size: 1Gi
+  path: /var/lib/rancher/k3s/storage
+
+pvc:
+  name: mysql
+  size: 512Mi
+
+secretName: mysql
+
+imageName: mysql:8.0
+
+cmName: mysql-initdb-config
+

@@ -1,0 +1,26 @@
+appName: kafka-sizing
+
+svcName: kafka-sizing
+
+namespace: kafka-sizing
+
+port: 8080
+
+replicas: 1
+
+cmName: kafka-sizing
+
+databaseUser: sa
+databasePassword: sa
+
+image:
+  name: quay.io/andyyuen105/kafka-sizing-mysql
+  tag: latest
+
+requests:
+  memory: 200Mi
+  cpu: 100m
+
+limits:
+  memory: 500Mi
+  cpu: 400m
