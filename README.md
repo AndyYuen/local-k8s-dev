@@ -1,5 +1,7 @@
 # Kubernetes for Local Development
 
+[![Local Kubernes Development](https://img.youtube.com/vi/oQIKoIlYpu4/default.jpg)](https://youtu.be/oQIKoIlYpu4)
+
 Local K8S Development Environment: the operative word here being ‘LOCAL’,meaning that we are going to install the development environment on our laptop and not on a server or in the cloud.
 There are many K8S favours to choose from. Which one do we use? Today I am going to compare 3 and choose one for my development environment:
 
@@ -7,7 +9,11 @@ There are many K8S favours to choose from. Which one do we use? Today I am going
 2. YAKKO – YAKKO is a tool (shell scripts) for building a VM-based single or multi-node OpenShift cluster. When you run it, it asks you a number of questions and builds a OpenShift cluster for you based on your answers. I already mentioned OpenShift a couple of times. There are reasons for this which I shall go into momentarily. In my opinion, using YAKKO is the easiest way to build a single-node or multi-node OpenShift cluster on VMs
 3. K3D – k3d is a lightweight wrapper to run k3s in docker. It can create either a single or multi-node cluster. It is easy and quick to setup.
 
+
 Let me show you the pros and cons of each and let you know which one I've chosen to be my development environment.
+
+
+Note: You can find more information on YAKKO on: https://github.com/ozchamo/YAKKO
 
 ## 1.0 Candidate Comparison
 The pros and cons of each candidate can be summarised in the following slides:
