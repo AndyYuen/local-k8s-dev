@@ -17,7 +17,7 @@ spec:
             name: {{ .Values.svcName }}
             port:
               number: {{ .Values.port }}
-        path: /kafka-sizing-dev/size
+        path: /kafka-sizing/size
         pathType: Prefix
 
  
